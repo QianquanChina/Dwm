@@ -41,16 +41,16 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "ﴥ", "", "" };
+static const char *tags[] = { "", "ﴥ", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
+	/* class                  instance    title       tags mask     isfloating   monitor */
+	{ "Gimp",                 NULL,       NULL,       0,            1,           -1 },
+	{ "Google Chrome", 	  NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
 /* layout(s) */
