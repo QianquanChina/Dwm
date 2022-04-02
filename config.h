@@ -10,7 +10,7 @@ static const int vertpad            = 10;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "CodeNewRoman Nerd Font Mono:size=17" };
 static const char dmenufont[]       = "CodeNewRoman Nerd Font Mono:size=15";
 static const char col_gray1[]       = "#222222";
