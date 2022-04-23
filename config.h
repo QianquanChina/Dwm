@@ -31,8 +31,8 @@ static const char *colors[][3]      = {
 	//[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	//[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 
-	[SchemeNorm] = { col_white, col_gray2,  col_gray2 },
-	[SchemeSel]  = { col_black, col_gray2,  col_cyan  },
+	[SchemeNorm] = { col_gray1, col_gray2,  col_gray2 },
+	[SchemeSel]  = { col_gray3, col_gray2,  col_cyan  },
 //	[SchemeSel]  = { col_gray4, col_purp1,  col_cyan  },
 };
 static const unsigned int alphas[][3]      = {
