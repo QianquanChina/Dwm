@@ -12,8 +12,12 @@ static const int sidepad            = 10;       /* horizontal padding of bar */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "CodeNewRoman Nerd Font Mono:size=17" };
-static const char dmenufont[]       = "CodeNewRoman Nerd Font Mono:size=15";
+static const char *fonts[]          = { 
+                                          "Monaco:size=15:style=Regular",
+                                          "Symbols Nerd Font:pixelsize=17:type=2048-em:antialias=true:autohint=true",
+                                          "WenQuanYi Zen Hei Mono:size=15:style=Regular:antialias=true:autohint:true"
+                                      };
+static const char dmenufont[]       = "Monaco:size=15:style=Regular";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -81,13 +85,15 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-no-lazy-grab", "-show", "drun", "-modi", "drun", "-theme", "~/.config/rofi/launchers/misc/blurry", NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *trayer[]  = { "/home/jc/Scripts/dwm/pallets.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "70x25", NULL };
 
 static Key keys[] = {
 	/* modifier                     key             function        argument */
 	{ MODKEY,                       XK_p,           spawn,          {.v = dmenucmd } },
-	{ MODKEY|ControlMask,           XK_t,           spawn,          {.v = termcmd } },
+	{ MODKEY|ControlMask,           XK_t,           spawn,          {.v = termcmd  } },
+	{ MODKEY,                       XK_b,           spawn,          {.v = trayer   } },
 	{ MODKEY,                       XK_b,           togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,           rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,           rotatestack,    {.i = -1 } },
