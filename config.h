@@ -28,16 +28,15 @@ static const char col_black[]       = "#000000";
 static const char col_purp1[]       = "#1d1f21";
 static const char col_cyan[]        = "#005577";
 
-static const unsigned int baralpha = 0xd0;
-static const unsigned int borderalpha = OPAQUE;
+static const unsigned int baralpha = 0xc0;
+static const unsigned int borderalpha = 0xdd;
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	//[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	//[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 
-	[SchemeNorm] = { col_gray1, col_gray2,  col_gray2 },
-	[SchemeSel]  = { col_gray3, col_gray2,  col_cyan  },
-//	[SchemeSel]  = { col_gray4, col_purp1,  col_cyan  },
+        [SchemeNorm] = { col_black, "#333333", "#444444" },
+        [SchemeSel]  = { col_white, "#333333", "#42A5F5" },
+
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
