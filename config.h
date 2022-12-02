@@ -85,6 +85,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-no-lazy-grab", "-show", "drun", "-modi", "drun", "-theme", "~/.config/rofi/launchers/misc/blurry", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *trayer[]  = { "/home/jc/Scripts/dwm/pallets.sh", NULL };
+static const char *i3lock[]  = { "/home/jc/Scripts/dwm/i3lock.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "70x25", NULL };
 
@@ -93,6 +94,7 @@ static Key keys[] = {
         { MODKEY,                       XK_p,           spawn,          {.v = dmenucmd } },
         { MODKEY|ControlMask,           XK_t,           spawn,          {.v = termcmd  } },
         { MODKEY|ShiftMask,             XK_b,           spawn,          {.v = trayer   } },
+        { MODKEY|ShiftMask,             XK_l,           spawn,          {.v = i3lock   } },
         { MODKEY,                       XK_b,           togglebar,      {0} },
         { MODKEY|ShiftMask,             XK_j,           rotatestack,    {.i = +1 } },
         { MODKEY|ShiftMask,             XK_k,           rotatestack,    {.i = -1 } },
